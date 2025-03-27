@@ -69,9 +69,12 @@
 
 \lstset{style=mystyle}
 
+\usepackage[scale=0.95]{sourcecodepro}
+
 \makeatletter
+% For numbered chapters (\chapter)
 \def\@makechapterhead#1{%
-  \vspace*{-60pt}% Change this value to adjust vertical space before chapter heading
+  \vspace*{-60pt}%
   {\parindent \z@ \raggedright \normalfont
     \ifnum \c@secnumdepth >\m@ne
     \huge\bfseries \@chapapp\space \thechapter
@@ -79,11 +82,19 @@
     \vskip 20\p@
     \fi
     \interlinepenalty\@M
-    \Huge \bfseries #1\par\nobreak
+    \Huge \bfseries \fontfamily{SourceCodePro-TLF}\selectfont #1\par\nobreak
+    \vskip 40\p@
+}}
+
+% For unnumbered chapters (\chapter*)
+\def\@makeschapterhead#1{%
+  \vspace*{-60pt}%
+  {\parindent \z@ \raggedright \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries \fontfamily{SourceCodePro-TLF}\selectfont #1\par\nobreak
     \vskip 40\p@
 }}
 \makeatother
-
 \usepackage{fancyhdr,lastpage}
 \pagestyle{fancy}
 \fancyhead[L]{\textbf{Spring 2025}}
@@ -126,40 +137,29 @@
 \begin{document}
 
   \maketitle
-\chapter*{First Day Checklist}
-Lab Rules: Attendance is required, each and every lab period for the full lab period. You are not to use a phone in the lab for texting, calling, nor browsing. No goofing off, that is.
 
-\noindent {\bf Checklist for the bare minimum first day work.}
-\begin{description}
-  \item[$\square$] Log into the campus network SLAS.
-  \item[$\square$] Log into Brightspace and see if there are any announcements for this lab class.
-  \item[$\square$] Make sure the email address that Brightspace has is one that works for you.
-  \item[$\square$] Make sure the email address that CUNYFirst has for you is one that you monitor.
-  \item[$\square$] Take a look at the Syllabus, also located on Brightspace.
-  \item[$\square$] WeBWorK is the service that we will use to assign and grade homework. Log in to WeBWorK at \\ \verb|https://www.math.csi.cuny.edu/webwork2/| and selecting your professor's name
-  or by going to the math department website \verb|https://www.math.csi.cuny.edu/|, finding the ``WeBWorK'' link at the lower right, and then selecting our class. You will find your username and initial password described on that page (it is your first initial, last name, and 4 digits from ID). If it doesn't work, your professor can help.
-  \item[$\square$] Change WeBWorK password. WeBWorK is not secure: you should not re-use a password from a system you care about. It's under ``User Settings'', as is an email address that will be used by WeBWorK. Change it, too, if you want. Course related emails will go through the CUNYFirst address or the Brightspace address, but exchanges about specific homework problems will go through WeBWorK. If you ever forget your password, your professor can reset it.
-  \item[$\square$] Contact someone else in the classroom by sending them a chat message, or a text, or just using your old-fashioned voice. Say hello, exchange email addresses, etc. It's okay to do this with several people.
-  \item[$\square$] Open ``Problem 1'' of the first homework set, ``01-calculator''.
-  \item[$\square$] Use the ``Juliabox'' button at the top of the problem. Your login name and Juliabox password are both set to your WeBWorK username. It works best if you are using Chrome.
-  \item[$\square$] Open the ``01-calculator.ipynb'' file. This opens our textbook. Read through this material. The first line is ``Read about this material here'' with a link. That link will take you to a \emph{more} detailed and in-depth explanation --- I advise you to skip it at least until you are stuck on a problem. After giving this material a read-through, you will come to a blank input line at the bottom. Look at the WeBWorK problem. Try to do it in the blank input line at the bottom. If you can't, get in touch with your instructor.
-  \item[$\square$] When you have the value for (a), copy-and-paste it into the WeBWorK blank. Press the ``Submit Answers'' button at the bottom of the WeBWorK page. This saves your answer, and also tells you if it was correct or incorrect. You have unlimited attempts for most problems, including this one.
-  \item[$\square$] You are expected to do your own work, but you are not expected to do it alone. The best experience for this class is to work in parallel with someone, as it helps to have someone to bounce ideas around and have fresh eyes, occasionally. Do not split the work in half: everyone needs to do and understand every problem. There's plenty of time.
-  \item[$\square$] You should do several problems from this project on the first day. Some people are able to finish it, even. It should definitely be completed by (at the latest) the end of the second lab period. Note that the due dates shown in WeBWorK are deadlines: they will not be postponed under (almost) any circumstances. You are expected to finish the projects a week or more \emph{ahead} of the deadlines.
-  \item[$\square$] At the end of lab period, navigate to the first problem that you have not completed (or the last problem, if you've completed them all), and press the ``email instructor'' button. In the message, include the names of the people sitting next to you. This email will count as your attendance at the first lab period.
-\end{description}
+\input{firstdaychecklist.txt}
 
 \chapter*{Installing \julia}
 
-It is in principle easy to install \julia on any computer, including laptops. This is sometimes broken, as there are too many types of computers with too many possible combinations of software on them.
+It is in principle easy to install \julia\ on any computer, including laptops. This is sometimes broken, as there are too many types of computers with too many possible combinations of software on them.
 
-The best advice I can give is to check out \verb|www.julialang.org| and download the version that seems most appropriate for your situation.
+The best advice I can give for installing \julia\ is to check out
+\begin{center}
+  \verb|www.julialang.org|
+\end{center}
+and download the version that seems most appropriate for your situation.
 
+After downloading and installing \julia, you will want to download our specific packages and files for this course. The instructions for doing that are kept up-to-date at
+\begin{center}
+  \verb|https://mth229.github.io/|
+\end{center}
+If you follow these directions and have trouble, or in hindsight think the directions could be worded differently, please email your recommendations to your professor.
 
 \chapter{01-calculator}
 
 \begin{enumerate}
-  \item Problem 1: \hspace{2cm} Title: \underline{``Using {\tt Julia} like a calculator''}
+  \item Problem 1: \hspace{2cm} Title: \underline{``Using \julia\ like a calculator''}
   \begin{enumerate}
   \item Summary of the problem:
     \begin{tcolorbox}[height=2cm]
@@ -431,7 +431,7 @@ plot(f,0,2)
 \clearpage
 
 \chapter{04-zeros}
-Solve the equation $\displaystyle \exp(7+\sin x) = 2x^2+2x+9.$
+Solve the equation $\displaystyle \exp(7+ \tan^{-1} x) = 2x^2+2x+9.$
 
 \vspace{5mm}
 \noindent {\bf Solution:}
@@ -439,7 +439,7 @@ First, we define the functions and plot them together.\newline
 \begin{minipage}{0.49\textwidth}
 \begin{lstlisting}[language=Julia]
 using MTH229, Plots
-left(x) = exp(7+sin(x))
+left(x) = exp(7+atan(x))
 right(x) = 2x^2 + 2x + 9
 plot(left, -10, 10)
 plot!(right)
@@ -448,22 +448,26 @@ plot!(right)
 \begin{minipage}{0.49\textwidth}
   \includegraphics[width=0.7\linewidth]{SkeletonNotes/04-graphics-1}
 \end{minipage}\newline
-We think: As $-1\le \sin x \le 1$, it must be that $e^6 \le \exp(7+\sin x) \le e^8$. Also, we know that $y=2x^2+2x+9$ is a parabola. We visualize it arcing up to where it crosses above $y=e^8$. With that in mind, we make a picture over $[-100,100]$, and from that picture decide to instead use $[-50,50]$. From that picture, we decide to use $[-40,40]$.\newline
+We think: As $-\frac{\pi}{2} < \arctan x < \frac{\pi}{2}$, it must be that $e^{7-\frac\pi2} \le \exp(7+\arctan x) \le e^{7+\frac\pi2}$. Also, we know that $y=2x^2+2x+9$ is a parabola. We visualize it arcing up to where it crosses above $y=e^9$. With that in mind, we make a picture over $[-100,100]$, and from that picture decide to instead use $[-50,50]$. From that picture, we decide to use $[-20,60]$.\newline
 \begin{minipage}{0.49\textwidth}
 \begin{lstlisting}[language=Julia]
-plot(left, -40, 40)
+plot(left, -20, 60)
 plot!(right)
 \end{lstlisting}
 \end{minipage}
 \begin{minipage}{0.49\textwidth}
 \includegraphics[width=0.7\linewidth]{SkeletonNotes/04-graphics-2}
 \end{minipage}\newline
-Now we can see 14 solutions, and there's a close call around $x\approx-16$ that we can't see visually if the graphs intersect or not. Now, we can use {\tt fzeros} to find the solutions.
+Now we can see 2 solutions, and we see that $[-20,0]$ is a bracketing interval for one, and $[40,60]$ is a bracketing interval for the other. To use {\tt bisection}, we need a function that has the solutions as roots. I name this function ``{\tt aux}'' for ``auxiliary''.
 \begin{lstlisting}[language=Julia]
 aux(x) = left(x) - right(x)
-fzeros(aux, -40, 40)
+bisection(aux, -20, 0) , bisection(aux, 40, 60)
 \end{lstlisting}
-The output is a list of all 14 solutions. There is no solution close to $-16$, which we double-check by plotting over the domain $[-18,-13]$.
+The output is the pair of solutions, the first in $[-20,0]$ and the second in $[40,60]$.
+\begin{lstlisting}[language=Julia]
+(-11.459032702506452, 50.30855414302505)
+\end{lstlisting}
+Note that the solutions are not points, but just $x$-values. We invented left, right, $y$, aux, to help us solve the problem, but the original problem is just about $x$-values.
 
 \clearpage
 

@@ -1,0 +1,28 @@
+\chapter*{First Day Checklist}
+Lab Rules: Attendance is required, each and every lab period for the full lab period. You are not to use a phone in the lab for texting, calling, nor browsing. No goofing off, that is.
+
+\vspace{1cm}
+\noindent \underline{\bf Checklist for the bare minimum first day work.}
+\begin{description}
+  \item[$\square$] Log into the campus network SLAS.
+  \item[$\square$] Log into Brightspace and see if there are any announcements for this lab class.
+  \item[$\square$] Make sure the email address that Brightspace has is one that works for you.
+  \item[$\square$] Make sure the email address that CUNYFirst has for you is one that you monitor.
+  \item[$\square$] Take a look at the Syllabus, also located on Brightspace.
+  \item[$\square$] WeBWorK is the service that we will use to assign and grade homework. Log in to WeBWorK
+  \begin{center} \verb|https://www.math.csi.cuny.edu/webwork2/| \end{center}
+  and select your professor's name, or log in
+  by going to the math department website
+  \begin{center}\verb|https://www.math.csi.cuny.edu/| \end{center}
+  and finding the ``WeBWorK'' link at the lower right, and then selecting our class. You will find your username and initial password described on that page (it is your first initial, last name, and 4 digits from ID). If you can't log in, your professor can help. There is often trouble for students who have added the class recently, and sometimes the username just gets malformed.
+  \item[$\square$] Change WeBWorK password. WeBWorK is not secure: you should not re-use a password from a system you care about. It's under ``User Settings'', as is an email address that will be used by WeBWorK. Change it, too, if you want. Course related emails will go through the CUNYFirst address or the Brightspace address, but exchanges about specific homework problems will go through WeBWorK. If you ever forget your password, your professor can reset it.
+  \item[$\square$] Contact someone else in the classroom by sending them a chat message, or a text, or just using your old-fashioned voice. Say hello, exchange email addresses, etc. It's okay to do this with several people.
+  \item[$\square$] Open ``Problem 1'' of the first homework set, ``01-calculator''.
+  \item[$\square$] Use the ``Juliabox'' button at the top of the problem. Your login name and Juliabox password are both set to your WeBWorK username. It works best if you are using Chrome.
+  \item[$\square$] Open the ``01-calculator.ipynb'' file. This opens our textbook. Read through this material. The first line is ``Read about this material here'' with a link. That link will take you to a \emph{more} detailed and in-depth explanation --- I advise you to skip it at least until you are stuck on a problem. After giving this material a read-through, you will come to a blank input line at the bottom. Look at the WeBWorK problem. Try to do it in the blank input line at the bottom. If you can't, get in touch with your instructor.
+  \item[$\square$] When you have the value for (a), copy-and-paste it into the WeBWorK blank. Press the ``Submit Answers'' button at the bottom of the WeBWorK page. This saves your answer, and also tells you if it was correct or incorrect. You have unlimited attempts for most problems, including this one.
+  \item[$\square$] You are expected to do your own work, but you are not expected to do it alone. The best experience for this class is to work in parallel with someone, as it helps to have someone to bounce ideas around and have fresh eyes, occasionally. Do not split the work in half: everyone needs to do and understand every problem. There's plenty of time.
+  \item[$\square$] After completing Problem 1, make notes about the problem on the page of this notebook in Chapter 1. Actually, we have given you a head-start by pre-making notes, so you get an idea of the level of formality (low) needed, and the kinds of comments you might want to make. If you got an error message (and you definitely did) while getting this problem, put the error message and how you resolved it in the ``What I was supposed to learn'' section. You should put something into each box for each problem in the entire course.
+  \item[$\square$] You should do several problems from this project on the first day. Some people are able to finish it, even. It should definitely be completed by (at the latest) the end of the second lab period. Note that the due dates shown in WeBWorK are deadlines: they will not be postponed under (almost) any circumstances. You are expected to finish the projects a week or more \emph{ahead} of the deadlines.
+  \item[$\square$] At the end of lab period, navigate to the first problem that you have not completed (or the last problem, if you've completed them all), and press the ``email instructor'' button. In the message, include the names of the people sitting next to you. This email will count as your attendance at the first lab period.
+\end{description}
