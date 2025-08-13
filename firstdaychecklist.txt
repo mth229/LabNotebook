@@ -1,5 +1,5 @@
 \chapter*{First Day Checklist}
-Lab Rules: Attendance is required, each and every lab period for the full lab period. You are not to use a phone in the lab for texting, calling, nor browsing. No goofing off, that is.
+Lab Rules: Attendance is required, each and every lab period for the full lab period. You are not to use a phone in the lab for texting, calling, nor for browsing. No goofing off, that is.
 
 \vspace{1cm}
 \noindent \underline{\bf Checklist for the bare minimum first day work.}
